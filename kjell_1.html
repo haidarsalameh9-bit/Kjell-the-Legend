@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kjell — The Legend</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f0; color: #1a1a1a; }
+
+    .hero { text-align: center; padding: 3rem 1rem 2rem; background: #fff; border-bottom: 1px solid #e8e8e8; }
+    .crown { font-size: 60px; animation: bounce 1s infinite alternate; display: inline-block; }
+    @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-10px); } }
+    .name { font-size: 52px; font-weight: 600; letter-spacing: -1px; }
+    .tagline { font-size: 16px; color: #888; margin-top: 8px; }
+    .badge-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 1.5rem 0 0; }
+    .badge { padding: 6px 14px; border-radius: 999px; font-size: 13px; font-weight: 500; }
+    .b1 { background: #EEEDFE; color: #3C3489; }
+    .b2 { background: #FAECE7; color: #993C1D; }
+    .b3 { background: #E1F5EE; color: #0F6E56; }
+    .b4 { background: #FAEEDA; color: #854F0B; }
+    .b5 { background: #E6F1FB; color: #185FA5; }
+
+    .container { max-width: 700px; margin: 0 auto; padding: 2rem 1rem; }
+
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-bottom: 2rem; }
+    .stat { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 1rem; text-align: center; }
+    .stat-num { font-size: 28px; font-weight: 600; }
+    .stat-label { font-size: 12px; color: #888; margin-top: 4px; line-height: 1.4; }
+
+    .section-title { font-size: 18px; font-weight: 600; margin-bottom: 1rem; }
+    .fact-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 2rem; }
+    .fact { background: #fff; border: 1px solid #e8e8e8; border-radius: 12px; padding: 1rem 1.25rem; font-size: 14px; display: flex; gap: 12px; align-items: flex-start; line-height: 1.6; }
+    .fact-icon { font-size: 20px; flex-shrink: 0; }
+
+    .quote-box { background: #fff; border-left: 3px solid #7F77DD; border-radius: 0 12px 12px 0; padding: 1rem 1.25rem; font-size: 15px; font-style: italic; margin-bottom: 2rem; }
+    .quote-attr { font-size: 13px; color: #888; margin-top: 6px; font-style: normal; }
+
+    .poll-option { background: #fff; border: 1px solid #e8e8e8; border-radius: 10px; padding: 0.75rem 1rem; margin-bottom: 8px; cursor: pointer; font-size: 14px; position: relative; overflow: hidden; transition: border-color 0.2s; }
+    .poll-option:hover { border-color: #bbb; }
+    .poll-bar { position: absolute; left: 0; top: 0; height: 100%; background: #EEEDFE; z-index: 0; transition: width 0.6s ease; border-radius: 10px; }
+    .poll-text { position: relative; z-index: 1; display: flex; justify-content: space-between; }
+    .poll-pct { font-weight: 600; color: #3C3489; }
+
+    .footer { text-align: center; padding: 2rem 1rem; font-size: 12px; color: #aaa; border-top: 1px solid #e8e8e8; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="crown">👑</div>
+  <div class="name">Kjell</div>
+  <div class="tagline">World's most average RM · Est. some time ago · Probably still figuring out Excel</div>
+  <div class="badge-row">
+    <span class="badge b1">Self-proclaimed genius</span>
+    <span class="badge b2">Serial meeting-extender</span>
+    <span class="badge b3">Coffee dependent</span>
+    <span class="badge b4">Replies "noted" to everything</span>
+    <span class="badge b5">Owns 1 blazer</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num">23</div>
+      <div class="stat-label">Loans managed<br>(with help)</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">∞</div>
+      <div class="stat-label">Times said<br>"leave it with me"</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Times actually<br>left it with him</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">47</div>
+      <div class="stat-label">Unread emails<br>from last Tuesday</div>
+    </div>
+  </div>
+
+  <div class="section-title">📋 Fun facts about Kjell</div>
+  <div class="fact-list">
+    <div class="fact"><span class="fact-icon">📊</span><span>His Excel sheets have more color coding than a traffic light system, yet somehow still make no sense.</span></div>
+    <div class="fact"><span class="fact-icon">📅</span><span>Has attended every "quick sync" that was supposed to be 15 minutes and lasted 2 hours. Every. Single. One.</span></div>
+    <div class="fact"><span class="fact-icon">☕</span><span>Scientifically proven to be non-functional before his third coffee. Studies pending on what happens after the fourth.</span></div>
+    <div class="fact"><span class="fact-icon">🤔</span><span>Has been "almost done" with that report since Monday. Which Monday is unclear.</span></div>
+    <div class="fact"><span class="fact-icon">📱</span><span>Responds to WhatsApp messages instantly, but emails within 3-5 business decades.</span></div>
+  </div>
+
+  <div class="quote-box">
+    "I'll have it done by end of day."
+    <div class="quote-attr">— Kjell, every single morning since joining</div>
+  </div>
+
+  <div class="section-title">📊 Office poll: What is Kjell doing right now?</div>
+  <div class="poll-option" onclick="vote(0)">
+    <div class="poll-bar" id="bar0" style="width:52%"></div>
+    <div class="poll-text"><span>Pretending to be on a call</span><span class="poll-pct" id="pct0">52%</span></div>
+  </div>
+  <div class="poll-option" onclick="vote(1)">
+    <div class="poll-bar" id="bar1" style="width:28%"></div>
+    <div class="poll-text"><span>Getting another coffee</span><span class="poll-pct" id="pct1">28%</span></div>
+  </div>
+  <div class="poll-option" onclick="vote(2)">
+    <div class="poll-bar" id="bar2" style="width:13%"></div>
+    <div class="poll-text"><span>Actually working (rare)</span><span class="poll-pct" id="pct2">13%</span></div>
+  </div>
+  <div class="poll-option" onclick="vote(3)">
+    <div class="poll-bar" id="bar3" style="width:7%"></div>
+    <div class="poll-text"><span>Reading this website</span><span class="poll-pct" id="pct3">7%</span></div>
+  </div>
+
+  <div class="footer">
+    Made with love (and zero regrets) by your colleagues 💜<br>
+    All facts are 100% accurate* <br>
+    <span style="font-size:11px">*none of them are accurate</span>
+  </div>
+
+</div>
+
+<script>
+  let votes = [52, 28, 13, 7];
+  function vote(i) {
+    votes[i] += 1;
+    const total = votes.reduce((a, b) => a + b, 0);
+    votes.forEach((v, idx) => {
+      const pct = Math.round(v / total * 100);
+      document.getElementById('bar' + idx).style.width = pct + '%';
+      document.getElementById('pct' + idx).textContent = pct + '%';
+    });
+  }
+</script>
+
+</body>
+</html>
